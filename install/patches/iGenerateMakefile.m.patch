@@ -1,0 +1,101 @@
+6c6
+< function iGenerateMakefile(cmd, model, target_name, ert_rtw_dir, env_dir, xcp_bt, external_source, external_lib, external_path)
+---
+> function iGenerateMakefile(cmd, model, target_name, ert_rtw_dir, env_dir, xcp_bt)
+29,66d28
+<     % Command option macros for user specified external source/lib/path
+<     if ~isempty(external_source)
+<         fprintf(fid, 'EXTERNAL_SOURCE =');
+<         
+<         if iscell(external_source)
+<             for i = 1:length(external_source)
+<                 fprintf(fid, [ ' ../../' iConvAbsPath2CygPath(regexprep(external_source{i}, '\', '/'))]);
+<             end
+<         else
+<             fprintf(fid, [ ' ../../' iConvAbsPath2CygPath(regexprep(external_source, '\', '/'))]);
+<         end
+<         fprintf(fid, '\n');
+<     end
+<     
+<     if ~isempty(external_lib)
+<         fprintf(fid, 'EXTERNAL_LIB =');
+<         if iscell(external_lib)
+<             for i = 1:length(external_lib)
+<                 fprintf(fid, [ ' ' iConvAbsPath2CygPath(regexprep(external_lib{i}, '\', '/'))]);
+<             end
+<         else
+<             fprintf(fid, [ ' ' iConvAbsPath2CygPath(regexprep(external_lib, '\', '/'))]);
+<         end
+<         fprintf(fid, '\n');
+<     end
+<     
+<     if ~isempty(external_path)
+<         fprintf(fid, 'EXTERNAL_PATH =');
+<         if iscell(external_path)
+<             for i = 1:length(external_path)
+<                 fprintf(fid, [ ' ''' iConvAbsPath2CygPath(regexprep(external_path{i}, '\', '/')) '''']);
+<             end
+<         else
+<             fprintf(fid, [ ' ''' iConvAbsPath2CygPath(regexprep(external_path, '\', '/')) '''']);
+<         end
+<         fprintf(fid, '\n');
+<     end
+<     
+68,77c30,35
+<     % Added quotes to support spaced included pathes 2011/01/07
+<     fprintf(fid, ['GNUARM_ROOT = ''' iGetGNUARM_ROOT() '''\n']);
+<     if isempty(iGetNEXTTOOL_ROOT()) == 0
+<         fprintf(fid, ['NEXTTOOL_ROOT = ''' iGetNEXTTOOL_ROOT() '''\n']);
+<     end
+<     fprintf(fid, ['MATLAB_ROOT = ''' iConvAbsPath2CygPath(regexprep(matlabroot, '\', '/')) '''\n']); 
+<     
+<     fprintf(fid, ['ENV_DIR = ' iConvAbsPath2CygPath(regexprep(env_dir, '\', '/')) '\n']);
+<     fprintf(fid, ['ERT_RTW =  ../' ert_rtw_dir '\n']);
+<     fprintf(fid, [ 'ROOT = $(ENV_DIR)/' iGetPlatformFolderName(env_dir) '\n']);
+---
+>     fprintf(fid, ['LD_LIBRARY_PATH =\n']);
+>     fprintf(fid, ['MATLAB_ROOT = ' matlabroot '\n']);
+>     fprintf(fid, ['ENV_DIR = ' env_dir '\n']);
+>     fprintf(fid, ['GNUARM_ROOT = $(ENV_DIR)/../gnuarm\n']);
+>     fprintf(fid, ['ROOT = $(ENV_DIR)/../nxtOSEK\n']);
+>     fprintf(fid, ['ERT_RTW = ../' ert_rtw_dir '\n']);
+80d37
+<         '$(EXTERNAL_PATH) '...
+87d43
+<     % Source macros
+90,92d45
+<         % TOPPERS/OSEK SG accepts only DOS path expression
+<         TOPPERS_OSEK_ROOT_SG = [regexprep(env_dir, '\', '/') '/' iGetPlatformFolderName(env_dir) '/toppers_osek'];
+<         fprintf(fid, ['TOPPERS_OSEK_ROOT_SG = ''' TOPPERS_OSEK_ROOT_SG '''\n']);
+99d51
+<                 '$(EXTERNAL_SOURCE) '...
+107d58
+<                 '$(EXTERNAL_SOURCE) '...
+121d71
+<                 '$(EXTERNAL_SOURCE) '...
+129d78
+<                 '$(EXTERNAL_SOURCE) '...
+136,140d84
+<     % Library macros
+<     if ~isempty(external_lib)
+<         fprintf(fid, 'USER_LIB= $(EXTERNAL_LIB)\n');
+<     end
+<    
+148c92
+<                 fprintf(fid, [iConvAbsPath2CygPath(regexprep(wavfilepath, '\', '/')) ' \\\n']);
+---
+>                 fprintf(fid, [wavfilepath ' \\\n']);
+157,163c101
+<     if isequal(cmd, 'buildrxe')
+<         fprintf(fid, 'BUILD_MODE = RXE_ONLY\n');
+<     elseif isequal(cmd, 'buildrom')
+<         fprintf(fid, 'BUILD_MODE = ROM_ONLY\n');
+<     elseif isequal(cmd, 'buildram')
+<         fprintf(fid, 'BUILD_MODE = RAM_ONLY\n');
+<     end
+---
+>     fprintf(fid, 'BUILD_MODE = ROM_ONLY\n');
+166c104
+<     fprintf(fid, ['include $(ENV_DIR)/' iGetPlatformFolderName(env_dir) '/ecrobot/ecrobot.mak\n']);
+---
+>     fprintf(fid, ['include $(ROOT)/ecrobot/ecrobot.mak\n']);

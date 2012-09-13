@@ -1,0 +1,7 @@
+#!/bin/sh
+
+export PRONXT_CURRENT_DIR="`pwd`"
+
+cd $PRONXT_ROOT
+matlab
+cd "$PRONXT_CURRENT_DIR"

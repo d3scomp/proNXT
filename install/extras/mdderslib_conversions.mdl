@@ -1,0 +1,3034 @@
+Library {
+  Name			  "mdderslib_conversions"
+  Version		  7.8
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  Created		  "Thu Apr 14 02:36:59 2011"
+  Creator		  "Tomas"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "bures"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Oct 14 16:53:05 2011"
+  RTWModifiedTimeStamp	  240510865
+  ModelVersionFormat	  "1.%<AutoIncrement:21>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.11.1"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.11.1"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.11.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.11.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.11.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.11.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.11.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.11.1"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 520, 285, 1400, 915 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "mdderslib_conversions"
+    Location		    [1732, 151, 2441, 718]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "16"
+    Block {
+      BlockType		      SubSystem
+      Name		      "int16_to_uint8[2] conversion"
+      SID		      "3"
+      Ports		      [1, 1]
+      Position		      [55, 304, 210, 356]
+      LibraryVersion	      "1.7"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "MATLAB Function"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Embedded MATLAB block"
+      MaskSelfModifiable      on
+      MaskDisplay	      "bgColor = Simulink.Root.ColorString2Rgb(get_param(gcbh, 'BackgroundColor')); image(imread('pr"
+      "ivate/eml_membrane_16.png','png','BackgroundColor',bgColor(1:3)),'center'); disp([10 10 'int16_to_uint8']);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      System {
+	Name			"int16_to_uint8[2] conversion"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"27"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "3::19"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "3::25"
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "3::24"
+	  Tag			  "Stateflow S-Function mdderslib_conversions 3"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  EnableBusSupport	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "y"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "3::27"
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "3::5"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "y"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "int32_to_uint8[4] conversion"
+      SID		      "1"
+      Ports		      [1, 1]
+      Position		      [55, 124, 210, 176]
+      LibraryVersion	      "1.32"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "MATLAB Function"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Embedded MATLAB block"
+      MaskSelfModifiable      on
+      MaskDisplay	      "bgColor = Simulink.Root.ColorString2Rgb(get_param(gcbh, 'BackgroundColor')); image(imread('pr"
+      "ivate/eml_membrane_16.png','png','BackgroundColor',bgColor(1:3)),'center'); disp([10 10 'int32_to_uint8']);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      System {
+	Name			"int32_to_uint8[4] conversion"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"23"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "1::19"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "1::21"
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "1::20"
+	  Tag			  "Stateflow S-Function mdderslib_conversions 2"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  EnableBusSupport	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "y"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "1::23"
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "1::5"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "y"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "int8_to_uint8 conversion"
+      SID		      "9"
+      Ports		      [1, 1]
+      Position		      [55, 389, 210, 441]
+      LibraryVersion	      "1.10"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "MATLAB Function"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Embedded MATLAB block"
+      MaskSelfModifiable      on
+      MaskDisplay	      "bgColor = Simulink.Root.ColorString2Rgb(get_param(gcbh, 'BackgroundColor')); image(imread('pr"
+      "ivate/eml_membrane_16.png','png','BackgroundColor',bgColor(1:3)),'center'); disp([10 10 'int8_to_uint8']);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      System {
+	Name			"int8_to_uint8 conversion"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"31"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "9::19"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "9::29"
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "9::28"
+	  Tag			  "Stateflow S-Function mdderslib_conversions 9"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  EnableBusSupport	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "y"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "9::31"
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "9::5"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "y"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "uint16_to_uint8[2] conversion"
+      SID		      "4"
+      Ports		      [1, 1]
+      Position		      [55, 214, 210, 266]
+      LibraryVersion	      "1.7"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "MATLAB Function"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Embedded MATLAB block"
+      MaskSelfModifiable      on
+      MaskDisplay	      "bgColor = Simulink.Root.ColorString2Rgb(get_param(gcbh, 'BackgroundColor')); image(imread('pr"
+      "ivate/eml_membrane_16.png','png','BackgroundColor',bgColor(1:3)),'center'); disp([10 10 'uint16_to_uint8']);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      System {
+	Name			"uint16_to_uint8[2] conversion"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"39"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "4::19"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "4::37"
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "4::36"
+	  Tag			  "Stateflow S-Function mdderslib_conversions 4"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  EnableBusSupport	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "y"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "4::39"
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "4::5"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "y"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "uint32_to_uint8[4] conversion"
+      SID		      "2"
+      Ports		      [1, 1]
+      Position		      [55, 34, 210, 86]
+      LibraryVersion	      "1.6"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "MATLAB Function"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Embedded MATLAB block"
+      MaskSelfModifiable      on
+      MaskDisplay	      "bgColor = Simulink.Root.ColorString2Rgb(get_param(gcbh, 'BackgroundColor')); image(imread('pr"
+      "ivate/eml_membrane_16.png','png','BackgroundColor',bgColor(1:3)),'center'); disp([10 10 'uint32_to_uint8']);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      System {
+	Name			"uint32_to_uint8[4] conversion"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"35"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "2::19"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "2::33"
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "2::32"
+	  Tag			  "Stateflow S-Function mdderslib_conversions 1"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  EnableBusSupport	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "y"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "2::35"
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "2::5"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "y"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "uint8[2]_to_int16 conversion"
+      SID		      "10"
+      Ports		      [1, 1]
+      Position		      [300, 304, 455, 356]
+      LibraryVersion	      "1.11"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "MATLAB Function"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Embedded MATLAB block"
+      MaskSelfModifiable      on
+      MaskDisplay	      "bgColor = Simulink.Root.ColorString2Rgb(get_param(gcbh, 'BackgroundColor')); image(imread('pr"
+      "ivate/eml_membrane_16.png','png','BackgroundColor',bgColor(1:3)),'center'); disp([10 10 'uint8_to_int16']);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      System {
+	Name			"uint8[2]_to_int16 conversion"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"35"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "10::19"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "10::33"
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "10::32"
+	  Tag			  "Stateflow S-Function mdderslib_conversions 10"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  EnableBusSupport	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "y"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "10::35"
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "10::5"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "y"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "uint8[2]_to_uint16 conversion"
+      SID		      "7"
+      Ports		      [1, 1]
+      Position		      [300, 214, 455, 266]
+      LibraryVersion	      "1.10"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "MATLAB Function"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Embedded MATLAB block"
+      MaskSelfModifiable      on
+      MaskDisplay	      "bgColor = Simulink.Root.ColorString2Rgb(get_param(gcbh, 'BackgroundColor')); image(imread('pr"
+      "ivate/eml_membrane_16.png','png','BackgroundColor',bgColor(1:3)),'center'); disp([10 10 'uint8_to_uint16']);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      System {
+	Name			"uint8[2]_to_uint16 conversion"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"43"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "7::19"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "7::41"
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "7::40"
+	  Tag			  "Stateflow S-Function mdderslib_conversions 7"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  EnableBusSupport	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "y"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "7::43"
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "7::5"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "y"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "uint8[4]_to_int32 conversion"
+      SID		      "6"
+      Ports		      [1, 1]
+      Position		      [300, 124, 455, 176]
+      LibraryVersion	      "1.10"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "MATLAB Function"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Embedded MATLAB block"
+      MaskSelfModifiable      on
+      MaskDisplay	      "bgColor = Simulink.Root.ColorString2Rgb(get_param(gcbh, 'BackgroundColor')); image(imread('pr"
+      "ivate/eml_membrane_16.png','png','BackgroundColor',bgColor(1:3)),'center'); disp([10 10 'uint8_to_int32']);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      System {
+	Name			"uint8[4]_to_int32 conversion"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"27"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "6::19"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "6::25"
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "6::24"
+	  Tag			  "Stateflow S-Function mdderslib_conversions 6"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  EnableBusSupport	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "y"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "6::27"
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "6::5"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "y"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "uint8[4]_to_uint32 conversion"
+      SID		      "8"
+      Ports		      [1, 1]
+      Position		      [300, 34, 455, 86]
+      LibraryVersion	      "1.10"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "MATLAB Function"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Embedded MATLAB block"
+      MaskSelfModifiable      on
+      MaskDisplay	      "bgColor = Simulink.Root.ColorString2Rgb(get_param(gcbh, 'BackgroundColor')); image(imread('pr"
+      "ivate/eml_membrane_16.png','png','BackgroundColor',bgColor(1:3)),'center'); disp([10 10 'uint8_to_uint32']);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      System {
+	Name			"uint8[4]_to_uint32 conversion"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"39"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "8::19"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "8::37"
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "8::36"
+	  Tag			  "Stateflow S-Function mdderslib_conversions 8"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  EnableBusSupport	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "y"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "8::39"
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "8::5"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "y"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "uint8_to_int8 conversion"
+      SID		      "5"
+      Ports		      [1, 1]
+      Position		      [300, 389, 455, 441]
+      LibraryVersion	      "1.10"
+      ErrorFcn		      "Stateflow.Translate.translate"
+      PermitHierarchicalResolution "ExplicitOnly"
+      TreatAsAtomicUnit	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Reusable function"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      SFBlockType	      "MATLAB Function"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Embedded MATLAB block"
+      MaskSelfModifiable      on
+      MaskDisplay	      "bgColor = Simulink.Root.ColorString2Rgb(get_param(gcbh, 'BackgroundColor')); image(imread('pr"
+      "ivate/eml_membrane_16.png','png','BackgroundColor',bgColor(1:3)),'center'); disp([10 10 'uint8_to_int8']);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "normalized"
+      System {
+	Name			"uint8_to_int8 conversion"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"31"
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  SID			  "5::19"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  SID			  "5::29"
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  " SFunction "
+	  SID			  "5::28"
+	  Tag			  "Stateflow S-Function mdderslib_conversions 5"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  EnableBusSupport	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "y"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  SID			  "5::31"
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  SID			  "5::5"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "y"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.6 (R2011b) dated Aug  6 2011, 03:24:51
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "mdderslib_conversions"
+    created		    "14-Apr-2011 02:37:16"
+    isLibrary		    1
+    firstTarget		    72
+    sfVersion		    76014001.0002
+  }
+  chart {
+    id			    2
+    name		    "uint32_to_uint8[4] conversion"
+    windowPosition	    [434.905 189.15 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1916 1128 1.333333333333333]
+    treeNode		    [0 3 0 0]
+    firstTransition	    5
+    firstJunction	    4
+    viewObj		    2
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    6
+    chartFileNumber	    1
+    disableImplicitCasting  1
+    eml {
+      name		      "uint32_to_uint8"
+    }
+  }
+  state {
+    id			    3
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 0]
+    superState		    SUBCHART
+    subviewer		    2
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = uint32_to_uint8(u)\n%#codegen\n\ny = typecast(uint32(u), 'uint8');"
+      editorLayout	      "100 M4x1[302 278 1080 750]"
+    }
+  }
+  junction {
+    id			    4
+    position		    [23.5747 49.5747 7]
+    chart		    2
+    linkNode		    [2 0 0]
+    subviewer		    2
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    5
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      4
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    2
+    linkNode		    [2 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    6
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [2 0 7]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_UINT32_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "uint32"
+  }
+  data {
+    id			    7
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [2 6 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 4]"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  instance {
+    id			    8
+    name		    "uint32_to_uint8[4] conversion"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    9
+    name		    "int32_to_uint8[4] conversion"
+    windowPosition	    [390.75 188.25 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1920 1200 1.333333333333333]
+    treeNode		    [0 10 0 0]
+    firstTransition	    12
+    firstJunction	    11
+    viewObj		    9
+    machine		    1
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    13
+    chartFileNumber	    2
+    disableImplicitCasting  1
+    eml {
+      name		      "int32_to_uint8"
+    }
+  }
+  state {
+    id			    10
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    9
+    treeNode		    [9 0 0 0]
+    superState		    SUBCHART
+    subviewer		    9
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = int32_to_uint8(u)\n%#codegen\n\ny = typecast(int32(u), 'uint8');"
+      editorLayout	      "100 M4x1[302 278 1080 750]"
+    }
+  }
+  junction {
+    id			    11
+    position		    [23.5747 49.5747 7]
+    chart		    9
+    linkNode		    [9 0 0]
+    subviewer		    9
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    12
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      11
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    9
+    linkNode		    [9 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    9
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    13
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [9 0 14]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_INT32_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "int32"
+  }
+  data {
+    id			    14
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [9 13 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 4]"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  instance {
+    id			    15
+    name		    "int32_to_uint8[4] conversion"
+    machine		    1
+    chart		    9
+  }
+  chart {
+    id			    16
+    name		    "int16_to_uint8[2] conversion"
+    windowPosition	    [275.572 314.067 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 65 1304 860 1.333333333333333]
+    treeNode		    [0 17 0 0]
+    firstTransition	    19
+    firstJunction	    18
+    viewObj		    16
+    machine		    1
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    20
+    chartFileNumber	    3
+    disableImplicitCasting  1
+    eml {
+      name		      "int16_to_uint8"
+    }
+  }
+  state {
+    id			    17
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    16
+    treeNode		    [16 0 0 0]
+    superState		    SUBCHART
+    subviewer		    16
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = int16_to_uint8(u)\n%#codegen\n\ny = typecast(int16(u), 'uint8');"
+      editorLayout	      "100 M4x1[2273 279 1080 750]"
+    }
+  }
+  junction {
+    id			    18
+    position		    [23.5747 49.5747 7]
+    chart		    16
+    linkNode		    [16 0 0]
+    subviewer		    16
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    19
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      18
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    16
+    linkNode		    [16 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    16
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    20
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [16 0 21]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_INT16_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "int16"
+  }
+  data {
+    id			    21
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [16 20 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 2]"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  instance {
+    id			    22
+    name		    "int16_to_uint8[2] conversion"
+    machine		    1
+    chart		    16
+  }
+  chart {
+    id			    23
+    name		    "uint16_to_uint8[2] conversion"
+    windowPosition	    [306.198 292.018 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 65 1304 860 1.333333333333333]
+    treeNode		    [0 24 0 0]
+    firstTransition	    26
+    firstJunction	    25
+    viewObj		    23
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    27
+    chartFileNumber	    4
+    disableImplicitCasting  1
+    eml {
+      name		      "uint16_to_uint8"
+    }
+  }
+  state {
+    id			    24
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    23
+    treeNode		    [23 0 0 0]
+    superState		    SUBCHART
+    subviewer		    23
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = uint16_to_uint8(u)\n%#codegen\n\ny = typecast(uint16(u), 'uint8');"
+      editorLayout	      "100 M4x1[302 278 1080 750]"
+    }
+  }
+  junction {
+    id			    25
+    position		    [23.5747 49.5747 7]
+    chart		    23
+    linkNode		    [23 0 0]
+    subviewer		    23
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    26
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      25
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    23
+    linkNode		    [23 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    23
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    27
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [23 0 28]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "uint16"
+  }
+  data {
+    id			    28
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [23 27 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 2]"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  instance {
+    id			    29
+    name		    "uint16_to_uint8[2] conversion"
+    machine		    1
+    chart		    23
+  }
+  chart {
+    id			    30
+    name		    "uint8_to_int8 conversion"
+    windowPosition	    [290.572 299.067 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 65 1304 860 1.333333333333333]
+    treeNode		    [0 31 0 0]
+    firstTransition	    33
+    firstJunction	    32
+    viewObj		    30
+    machine		    1
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    34
+    chartFileNumber	    5
+    disableImplicitCasting  1
+    eml {
+      name		      "uint8_to_int8"
+    }
+  }
+  state {
+    id			    31
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    30
+    treeNode		    [30 0 0 0]
+    superState		    SUBCHART
+    subviewer		    30
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = uint8_to_int8(u)\n%#codegen\n\ny = typecast(uint8(u), 'int8');"
+      editorLayout	      "100 M4x1[302 278 1080 750]"
+    }
+  }
+  junction {
+    id			    32
+    position		    [23.5747 49.5747 7]
+    chart		    30
+    linkNode		    [30 0 0]
+    subviewer		    30
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    33
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      32
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    30
+    linkNode		    [30 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    30
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    34
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [30 0 35]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    35
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [30 34 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_INT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "int8"
+  }
+  instance {
+    id			    36
+    name		    "uint8_to_int8 conversion"
+    machine		    1
+    chart		    30
+  }
+  chart {
+    id			    37
+    name		    "uint8[4]_to_int32 conversion"
+    windowPosition	    [275.572 314.067 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 65 1304 860 1.333333333333333]
+    treeNode		    [0 38 0 0]
+    firstTransition	    40
+    firstJunction	    39
+    viewObj		    37
+    machine		    1
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    41
+    chartFileNumber	    6
+    disableImplicitCasting  1
+    eml {
+      name		      "uint8_to_int32"
+    }
+  }
+  state {
+    id			    38
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    37
+    treeNode		    [37 0 0 0]
+    superState		    SUBCHART
+    subviewer		    37
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = uint8_to_int32(u)\n%#codegen\n\ny = typecast(uint8(u), 'int32');"
+      editorLayout	      "100 M4x1[302 278 1080 750]"
+    }
+  }
+  junction {
+    id			    39
+    position		    [23.5747 49.5747 7]
+    chart		    37
+    linkNode		    [37 0 0]
+    subviewer		    37
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    40
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      39
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    37
+    linkNode		    [37 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    37
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    41
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [37 0 42]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 4]"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    42
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [37 41 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_INT32_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "int32"
+  }
+  instance {
+    id			    43
+    name		    "uint8[4]_to_int32 conversion"
+    machine		    1
+    chart		    37
+  }
+  chart {
+    id			    44
+    name		    "uint8[2]_to_uint16 conversion"
+    windowPosition	    [321.198 277.018 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 65 1304 860 1.333333333333333]
+    treeNode		    [0 45 0 0]
+    firstTransition	    47
+    firstJunction	    46
+    viewObj		    44
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    48
+    chartFileNumber	    7
+    disableImplicitCasting  1
+    eml {
+      name		      "uint8_to_uint16"
+    }
+  }
+  state {
+    id			    45
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    44
+    treeNode		    [44 0 0 0]
+    superState		    SUBCHART
+    subviewer		    44
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = uint8_to_uint16(u)\n%#codegen\n\ny = typecast(uint8(u), 'uint16');"
+      editorLayout	      "100 M4x1[302 278 1080 750]"
+    }
+  }
+  junction {
+    id			    46
+    position		    [23.5747 49.5747 7]
+    chart		    44
+    linkNode		    [44 0 0]
+    subviewer		    44
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    47
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      46
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    44
+    linkNode		    [44 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    44
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    48
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [44 0 49]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 2]"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    49
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [44 48 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_UINT16_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint16"
+  }
+  instance {
+    id			    50
+    name		    "uint8[2]_to_uint16 conversion"
+    machine		    1
+    chart		    44
+  }
+  chart {
+    id			    51
+    name		    "uint8[4]_to_uint32 conversion"
+    windowPosition	    [306.198 292.018 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 65 1304 860 1.333333333333333]
+    treeNode		    [0 52 0 0]
+    firstTransition	    54
+    firstJunction	    53
+    viewObj		    51
+    machine		    1
+    toolbarMode		    LIBRARY_TOOLBAR
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    55
+    chartFileNumber	    8
+    disableImplicitCasting  1
+    eml {
+      name		      "uint8_to_uint32"
+    }
+  }
+  state {
+    id			    52
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    51
+    treeNode		    [51 0 0 0]
+    superState		    SUBCHART
+    subviewer		    51
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = uint8_to_uint32(u)\n%#codegen\n\ny = typecast(uint8(u), 'uint32');"
+      editorLayout	      "100 M4x1[302 278 1080 750]"
+    }
+  }
+  junction {
+    id			    53
+    position		    [23.5747 49.5747 7]
+    chart		    51
+    linkNode		    [51 0 0]
+    subviewer		    51
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    54
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      53
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    51
+    linkNode		    [51 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    51
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    55
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [51 0 56]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 4]"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    56
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [51 55 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_UINT32_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint32"
+  }
+  instance {
+    id			    57
+    name		    "uint8[4]_to_uint32 conversion"
+    machine		    1
+    chart		    51
+  }
+  chart {
+    id			    58
+    name		    "int8_to_uint8 conversion"
+    windowPosition	    [290.572 299.067 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 65 1304 860 1.333333333333333]
+    treeNode		    [0 59 0 0]
+    firstTransition	    61
+    firstJunction	    60
+    viewObj		    58
+    machine		    1
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    62
+    chartFileNumber	    9
+    disableImplicitCasting  1
+    eml {
+      name		      "int8_to_uint8"
+    }
+  }
+  state {
+    id			    59
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    58
+    treeNode		    [58 0 0 0]
+    superState		    SUBCHART
+    subviewer		    58
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = int8_to_uint8(u)\n%#codegen\n\ny = typecast(int8(u), 'uint8');"
+      editorLayout	      "100 M4x1[302 278 1080 750]"
+    }
+  }
+  junction {
+    id			    60
+    position		    [23.5747 49.5747 7]
+    chart		    58
+    linkNode		    [58 0 0]
+    subviewer		    58
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    61
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      60
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    58
+    linkNode		    [58 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    58
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    62
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [58 0 63]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_INT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "int8"
+  }
+  data {
+    id			    63
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [58 62 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  instance {
+    id			    64
+    name		    "int8_to_uint8 conversion"
+    machine		    1
+    chart		    58
+  }
+  chart {
+    id			    65
+    name		    "uint8[2]_to_int16 conversion"
+    windowPosition	    [305.572 284.067 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 65 1304 860 1.333333333333333]
+    treeNode		    [0 66 0 0]
+    firstTransition	    68
+    firstJunction	    67
+    viewObj		    65
+    machine		    1
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    69
+    chartFileNumber	    10
+    disableImplicitCasting  1
+    eml {
+      name		      "uint8_to_int16"
+    }
+  }
+  state {
+    id			    66
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    65
+    treeNode		    [65 0 0 0]
+    superState		    SUBCHART
+    subviewer		    65
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = uint8_to_int16(u)\n%#codegen\n\ny = typecast(uint8(u), 'int16');"
+      editorLayout	      "100 M4x1[302 278 1080 750]"
+    }
+  }
+  junction {
+    id			    67
+    position		    [23.5747 49.5747 7]
+    chart		    65
+    linkNode		    [65 0 0]
+    subviewer		    65
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    68
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      67
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    65
+    linkNode		    [65 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    65
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    69
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [65 0 70]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 2]"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    70
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [65 69 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"[1 1]"
+      }
+      type {
+	primitive		SF_INT16_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "int16"
+  }
+  instance {
+    id			    71
+    name		    "uint8[2]_to_int16 conversion"
+    machine		    1
+    chart		    65
+  }
+  target {
+    id			    72
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 73]
+  }
+  target {
+    id			    73
+    name		    "rtw"
+    machine		    1
+    linkNode		    [1 72 0]
+  }
+}

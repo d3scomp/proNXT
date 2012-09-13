@@ -1,0 +1,171 @@
+19,31d18
+< %   nxtbuild('model', 'build'):
+< %     builds RXE/ROM/RXE executables by using GCC toolchain.
+< %
+< %   nxtbuild('model', 'build', {'./foo.c', './foo1.c'}, [], pwd):
+< %     build binary executable which includes external C source files and library.
+< %     The third argument: external C source files with relative path from
+< %       the current directory.
+< %     The forth argument: external C library with absolute path
+< %     The fifth argument: path to external C header files with absolute path
+< %
+< %   nxtbuild('model', 'buildrxe'):
+< %     builds an executable for only Enhanced NXT firmware by using GCC toolchain.
+< %
+41,50d27
+< %   nxtbuild('model', 'rxeflash'):
+< %     upload the ECRobot generated binary file into Enhanced NXT firmware
+< %     in the NXT. nxtOSEK 2.02 or later version is required.
+< %
+< %   nxtbuild('biosflash'):
+< %     upload NXT BIOS to the NXT for ul2flash. 
+< %     LEJOS OSEK 2.00 or later version is required. 
+< %     NOTE that biosflash is required only for when LEGO standard firmware or 
+< %     other non-nxtOSEK firmware were installed in the NXT.
+< %
+56,59d32
+< %   nxtbuild('model', 'ul2ram'):
+< %   nxtbuild('model', 'ramboot'):
+< %     upload the ECRobot generated binary file into SRAM memory in the NXT. 
+< %
+80,82d52
+< external_source = '';
+< external_lib = '';
+< external_path = '';
+84,91d53
+<     case 1
+<         if isequal(lower(varargin{1}), 'biosflash')
+<             cmd = 'biosflash';
+<             env_dir = fileparts(which('nxtbuild'));
+<             prj_dir = 'nxtprj';
+<         else
+<             error('NXTBuild:invalid argument.')
+<         end
+102,105d63
+<         ert_rtw_dir = [sys '_ert_rtw'];
+<         env_dir = fileparts(which('nxtbuild'));
+<         prj_dir = 'nxtprj';
+<         model = bdroot;
+111a70,73
+>             ert_rtw_dir = [sys '_ert_rtw'];
+>             env_dir = fileparts(which('nxtbuild'));
+>             prj_dir = 'nxtprj';
+>             model = bdroot;
+118,158d79
+<         elseif (isequal(cmd, 'build') || ...
+<                 isequal(cmd, 'buildrxe') || ...
+<                 isequal(cmd, 'buildrom') || ...
+<                 isequal(cmd, 'buildram') || ...
+<                 isequal(cmd, 'cgen'))
+<             external_source = varargin{3};
+<         else
+<             error('NXTBuild:invalid argument.')
+<         end
+<     case 4
+<         sys = varargin{1};
+<         cmd = lower(varargin{2});
+<         ert_rtw_dir = [sys '_ert_rtw'];
+<         env_dir = fileparts(which('nxtbuild'));
+<         prj_dir = 'nxtprj';
+<         model = bdroot;
+<         if (isequal(cmd, 'build') || ...
+<             isequal(cmd, 'buildrxe') || ...
+<             isequal(cmd, 'buildrom') || ...
+<             isequal(cmd, 'buildram') || ...
+<             isequal(cmd, 'cgen'))
+<             external_source = varargin{3};
+<             external_lib = varargin{4};
+<         else
+<             error('NXTBuild:invalid argument.')
+<         end
+<     case 5
+<         sys = varargin{1};
+<         cmd = lower(varargin{2});
+<         ert_rtw_dir = [sys '_ert_rtw'];
+<         env_dir = fileparts(which('nxtbuild'));
+<         prj_dir = 'nxtprj';
+<         model = bdroot;
+<         if (isequal(cmd, 'build') || ...
+<             isequal(cmd, 'buildrxe') || ...
+<             isequal(cmd, 'buildrom') || ...
+<             isequal(cmd, 'buildram') || ...
+<             isequal(cmd, 'cgen'))
+<             external_source = varargin{3};
+<             external_lib = varargin{4};
+<             external_path = varargin{5};
+166,183d86
+< % check third party tool configurations
+< if isequal(cmd, 'cgen') == 0
+<     % check ecrobotnxtsetupinfo.m was generated
+<     try
+<         evalin('base', 'ecrobotnxtsetupinfo');
+<     catch
+<         error(['ecrobotnxtsetupinfo.m does not exist in environment directory. '...
+<             'Execute ecrobotnxtsetup.m to specify necessity information.']);
+<     end
+< 
+<     % check GNUARM_ROOT is still defined in Windows Environment Varibles
+<     % ECRobot NXT V3.10 or later version retrieves GNUARM root directory path 
+<     % by ecrobotnxtsetup.m.
+<     % Therefore, GNUARM_ROOT makes a confliction during build process.
+<     if (~isempty(getenv('GNUARM_ROOT')))
+<         error('Please remove GNUARM_ROOT from Windows Environment Variable.');
+<     end
+< end
+230,232c133,134
+<             iGenerateBuildBat(iGetCYGWIN_BIN()); % generate build.bat file in nxtprj dir
+<             iGenerateMakefile(cmd, model, sys, ert_rtw_dir, env_dir, xcp_bt, external_source, external_lib, external_path); % generated Makefile in nxtprj dir
+<             iGenerateCommand('make all'); % invoke GNU make with Makefile
+---
+>             iGenerateMakefile(cmd, model, sys, ert_rtw_dir, env_dir, xcp_bt) % generated Makefile in nxtprj dir
+>             system('make all'); % invoke GNU make with Makefile
+247,260c149
+<             iGenerateCommand('make clean'); % invoke GNU make with Makefile
+<             cd(current_dir); % back to the model located dir
+<         catch
+<             cd(current_dir); % back to the model located dir
+<         end
+< 
+<     case {'ul2ram', 'ramboot'}
+<         current_dir = pwd;
+<         cd(prj_dir); % move to project dir
+<         try
+<             bin_file = [sys '_ram.bin'];
+<             disp(['### Execute ramboot for uploading a program into RAM: ./' prj_dir '/' bin_file]);
+<             iGenerateCommand('make ramboot');
+<             iGenerateCommand('sh ./ramboot.sh');
+---
+>             system('make clean'); % invoke GNU make with Makefile
+273,274c162,163
+<             iGenerateCommand('make appflash');
+<             iGenerateCommand('sh ./appflash.sh');
+---
+>             system('make appflash');
+>             system('sh ./appflash.sh');
+280,305d168
+<     case 'rxeflash'
+<         current_dir = pwd;
+<         cd(prj_dir); % move to project dir
+<         
+<         try
+<             rxe_file = [sys '.rxe'];
+<             disp(['### Execute NeXTTool for uploading a program to the enhanced NXT standard firmware: ./' prj_dir '/' rxe_file]);
+<             iGenerateCommand('make rxeflash');
+<             iGenerateCommand('sh ./rxeflash.sh');
+<             cd(current_dir); % back to the model located dir
+<         catch
+<             cd(current_dir); % back to the model located dir
+<         end
+< 
+<     case 'biosflash'
+<         current_dir = pwd;
+<         cd(prj_dir); % move to project dir
+<         try
+<             disp('### Execute NeXTTool for uploading NXT BIOS...');
+<             iGenerateBuildBat(iGetCYGWIN_BIN()); % generate build.bat file in nxtprj dir
+<             iGenerateCommand('make biosflash');
+<             iGenerateCommand('sh ./biosflash.sh');
+<             cd(current_dir); % back to the model located dir
+<         catch
+<             cd(current_dir); % back to the model located dir
+<         end

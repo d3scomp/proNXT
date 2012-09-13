@@ -1,0 +1,23 @@
+4,18d3
+< # GNUARM_ROOT and NEXTTOOL_ROOT need to adapt your PC environment
+< #===============================================================================
+< 
+< # specify GNU-ARM root directory
+< ifndef GNUARM_ROOT
+< GNUARM_ROOT = /cygdrive/C/cygwin/GNUARM
+< endif
+< 
+< # specify NeXTTool root directory
+< ifndef NEXTTOOL_ROOT
+< NEXTTOOL_ROOT = /cygdrive/C/cygwin/nexttool
+< endif
+< 
+< 
+< #===============================================================================
+35,38c20
+< BIOSFLASH = biosflash.exe
+< APPFLASH  = appflash.exe
+< RAMBOOT   = ramboot.exe
+< NEXTTOOL  = NeXTTool.exe
+---
+> APPFLASH  = appflash
